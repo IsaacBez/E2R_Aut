@@ -7,7 +7,7 @@ Library  AppiumLibrary
 ${APP_PACKAGE}                         br.com.eletra.e2r.test
 ${APP_ACTIVITY}                        br.com.eletra.e2r.test.MainActivity
 ${APPIUM_SERVER_URL}                   http://localhost:4723
-${WAIT_FOR_ANDROID_ACTIVITY}           2s
+${WAIT_FOR_ANDROID_ACTIVITY}           5s
 
 
 *** Keywords ***

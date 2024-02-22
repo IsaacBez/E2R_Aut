@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-22T18:40:17.438257" rpa="false" schemaversion="5">
+<suite id="s1" name="tests autenticar E2R" source="C:\Users\conta\Desktop\WDA\Automação\E2R\E2R_Aut\E2R_Aut\main\tests\tests_autenticar_E2R.robot">
+<test id="s1-t1" name="CT_001 - Verificar Visibilidade dos elementos da tela login" line="10">
+<kw name="Open app android" owner="resources_comum" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>platformName=Android</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=true</arg>
+<arg>fullReset=false</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-02-22T18:40:18.065706" elapsed="28.944830"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T18:40:49.012128" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T18:40:47.010536" elapsed="2.001592"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:18.063701" elapsed="30.949015"/>
+</kw>
+<kw name="Given Que estou na tela de autenticação" owner="resources_autenticar_E2R">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:51.611812" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<arg>${BT_LOGIN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:49.013784" elapsed="2.598028"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:51.858920" level="INFO">xpath criteria: //android.widget.ImageView</msg>
+<arg>${LOGO_ELETRA}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:51.612807" elapsed="0.246113"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:52.247918" level="INFO">xpath criteria: //android.view.View[@content-desc="Login"]</msg>
+<arg>${TITULO_TELA_LOGIN}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:51.858920" elapsed="0.388998"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:49.013784" elapsed="3.234134"/>
+</kw>
+<kw name="Then O componente ${CAMPO_USUARIO} fica visivel" owner="resources_autenticar_E2R" source_name="O componente ${COMPONENTE} fica visivel">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:52.566965" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:52.250439" elapsed="0.316526"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:52.248922" elapsed="0.318043"/>
+</kw>
+<kw name="And O componente ${CAMPO_SENHA} fica visivel" owner="resources_autenticar_E2R" source_name="O componente ${COMPONENTE} fica visivel">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:52.942772" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:52.568601" elapsed="0.374243"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:52.567531" elapsed="0.375313"/>
+</kw>
+<kw name="And O componente ${BT_LOGIN} fica visivel" owner="resources_autenticar_E2R" source_name="O componente ${COMPONENTE} fica visivel">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:53.227260" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:52.943838" elapsed="0.284427"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:52.942844" elapsed="0.285421"/>
+</kw>
+<kw name="And O componente ${BT_VISUALIZAR_SENHA} fica visivel" owner="resources_autenticar_E2R" source_name="O componente ${COMPONENTE} fica visivel">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:53.436492" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]/android.widget.Button</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:53.229265" elapsed="0.207227"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:53.228265" elapsed="0.208227"/>
+</kw>
+<kw name="And O componente ${LINK_RECUPERAR_SENHA} fica visivel" owner="resources_autenticar_E2R" source_name="O componente ${COMPONENTE} fica visivel">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:53.615845" level="INFO">xpath criteria: //android.view.View[@content-desc="Forgot password?"]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:53.438501" elapsed="0.177344"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:53.437501" elapsed="0.178344"/>
+</kw>
+<kw name="And O componente ${LINK_CRIAR_CONTA} fica visivel" owner="resources_autenticar_E2R" source_name="O componente ${COMPONENTE} fica visivel">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:40:53.761166" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Create account"]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:40:53.617408" elapsed="0.143758"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:53.616842" elapsed="0.145884"/>
+</kw>
+<kw name="Close app" owner="resources_comum" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-02-22T18:40:53.763790" elapsed="0.347525"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:53.763790" elapsed="0.347525"/>
+</kw>
+<tag>Visibilidade</tag>
+<status status="PASS" start="2024-02-22T18:40:18.061160" elapsed="36.050155"/>
+</test>
+<test id="s1-t2" name="CT_002 - Teste o campo E-mail vazio" line="20">
+<kw name="Open app android" owner="resources_comum" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>platformName=Android</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=true</arg>
+<arg>fullReset=false</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-02-22T18:40:54.114943" elapsed="13.403491"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T18:41:09.519811" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T18:41:07.518434" elapsed="2.001377"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:40:54.114943" elapsed="15.404868"/>
+</kw>
+<kw name="Given Que estou na tela de autenticação" owner="resources_autenticar_E2R">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:12.213256" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<arg>${BT_LOGIN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:09.521872" elapsed="2.692409"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:12.811716" level="INFO">xpath criteria: //android.widget.ImageView</msg>
+<arg>${LOGO_ELETRA}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:12.214281" elapsed="0.597435"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:13.261149" level="INFO">xpath criteria: //android.view.View[@content-desc="Login"]</msg>
+<arg>${TITULO_TELA_LOGIN}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:12.811716" elapsed="0.449433"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:09.520873" elapsed="3.740276"/>
+</kw>
+<kw name="And Preencho os campos com valores validos" owner="resources_autenticar_E2R">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:13.660248" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:13.262717" elapsed="0.397531"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:13.662820" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'.</msg>
+<msg time="2024-02-22T18:41:14.457098" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:13.660248" elapsed="0.796850"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:14.460119" level="INFO">Typing text 'isaac.bez.oliveira@gmail.com' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'</msg>
+<msg time="2024-02-22T18:41:15.696784" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>isaac.bez.oliveira@gmail.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:14.458106" elapsed="1.238678"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:16.368472" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:15.697788" elapsed="0.670684"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:16.372470" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
+<msg time="2024-02-22T18:41:17.489805" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:16.368472" elapsed="1.122336"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:17.495014" level="INFO">Typing text '61qLKgnS' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-02-22T18:41:18.273428" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>61qLKgnS</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:17.490808" elapsed="0.782620"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:13.261149" elapsed="5.012279"/>
+</kw>
+<kw name="When Defino ${CAMPO_USUARIO} vazio" owner="resources_autenticar_E2R" source_name="Defino ${COMPONENTE} vazio">
+<kw name="Clico em ${COMPONENTE}" owner="resources_autenticar_E2R" source_name="Clico em ${COMPONENTE}">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:18.277494" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'.</msg>
+<msg time="2024-02-22T18:41:18.826602" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:18.275492" elapsed="0.551110"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:18.275492" elapsed="0.552118"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:18.830609" level="INFO">Typing text ' ' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'</msg>
+<msg time="2024-02-22T18:41:20.241437" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${COMPONENTE}</arg>
+<arg>${SPACE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:18.827610" elapsed="1.413827"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:20.243609" level="INFO">Clear text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'</msg>
+<msg time="2024-02-22T18:41:21.573240" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:20.241437" elapsed="1.331803"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:18.274505" elapsed="3.298735"/>
+</kw>
+<kw name="And Clico em ${BT_LOGIN}" owner="resources_autenticar_E2R" source_name="Clico em ${COMPONENTE}">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:21.577300" level="INFO">Clicking element '//android.widget.Button[@content-desc="Login"]'.</msg>
+<msg time="2024-02-22T18:41:22.347595" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:21.575302" elapsed="0.772293"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:21.574303" elapsed="0.774854"/>
+</kw>
+<kw name="Then Aparece o erro vazio ${MENS_ERRO_EMAIL_OBRIGATORIO}" owner="resources_autenticar_E2R" source_name="Aparece o erro vazio ${COMPONENTE}">
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:22.941208" level="INFO">Element '//android.view.View[@content-desc="Required field."][1]' attribute 'content-desc' is 'Required field.' </msg>
+<msg time="2024-02-22T18:41:22.941208" level="INFO">xpath criteria: //android.view.View[@content-desc="Required field."][1]</msg>
+<arg>${COMPONENTE}</arg>
+<arg>content-desc</arg>
+<arg>Required field.</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-02-22T18:41:22.350237" elapsed="0.590971"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:22.350237" elapsed="0.590971"/>
+</kw>
+<kw name="Close app" owner="resources_comum" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-02-22T18:41:22.943829" elapsed="0.494352"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:22.943829" elapsed="0.494352"/>
+</kw>
+<tag>Teste valor vazio</tag>
+<status status="PASS" start="2024-02-22T18:40:54.113954" elapsed="29.325231"/>
+</test>
+<test id="s1-t3" name="CT_003 - Teste o campo Senha vazio" line="28">
+<kw name="Open app android" owner="resources_comum" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>platformName=Android</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=true</arg>
+<arg>fullReset=false</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-02-22T18:41:23.441190" elapsed="16.894669"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T18:41:42.337233" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T18:41:40.336863" elapsed="2.000370"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:23.441190" elapsed="18.896571"/>
+</kw>
+<kw name="Given Que estou na tela de autenticação" owner="resources_autenticar_E2R">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:44.262368" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<arg>${BT_LOGIN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:42.338790" elapsed="1.923578"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:44.436674" level="INFO">xpath criteria: //android.widget.ImageView</msg>
+<arg>${LOGO_ELETRA}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:44.263678" elapsed="0.172996"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:44.640182" level="INFO">xpath criteria: //android.view.View[@content-desc="Login"]</msg>
+<arg>${TITULO_TELA_LOGIN}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:44.436674" elapsed="0.203508"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:42.337761" elapsed="2.302421"/>
+</kw>
+<kw name="And Preencho os campos com valores validos" owner="resources_autenticar_E2R">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:44.967830" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:44.641181" elapsed="0.326649"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:44.969838" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'.</msg>
+<msg time="2024-02-22T18:41:45.326525" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:44.967830" elapsed="0.358695"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:45.329526" level="INFO">Typing text 'isaac.bez.oliveira@gmail.com' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'</msg>
+<msg time="2024-02-22T18:41:45.619952" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>isaac.bez.oliveira@gmail.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:45.327528" elapsed="0.292424"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:46.249603" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:41:45.619952" elapsed="0.629651"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:46.251604" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
+<msg time="2024-02-22T18:41:46.649431" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:46.249603" elapsed="0.399828"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:46.652437" level="INFO">Typing text '61qLKgnS' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-02-22T18:41:47.911711" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>61qLKgnS</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:46.649431" elapsed="1.262280"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:44.641181" elapsed="3.270530"/>
+</kw>
+<kw name="When Defino ${CAMPO_SENHA} vazio" owner="resources_autenticar_E2R" source_name="Defino ${COMPONENTE} vazio">
+<kw name="Clico em ${COMPONENTE}" owner="resources_autenticar_E2R" source_name="Clico em ${COMPONENTE}">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:47.915789" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
+<msg time="2024-02-22T18:41:49.171201" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:47.913241" elapsed="1.257960"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:47.913241" elapsed="1.257960"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:49.174745" level="INFO">Typing text ' ' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-02-22T18:41:50.140829" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${COMPONENTE}</arg>
+<arg>${SPACE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:49.171201" elapsed="0.969628"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:50.143375" level="INFO">Clear text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-02-22T18:41:50.825736" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:50.140829" elapsed="0.684907"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:47.913241" elapsed="2.912495"/>
+</kw>
+<kw name="And Clico em ${BT_LOGIN}" owner="resources_autenticar_E2R" source_name="Clico em ${COMPONENTE}">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:50.829737" level="INFO">Clicking element '//android.widget.Button[@content-desc="Login"]'.</msg>
+<msg time="2024-02-22T18:41:51.523609" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:41:50.827740" elapsed="0.695869"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:50.826740" elapsed="0.696869"/>
+</kw>
+<kw name="Then Aparece o erro vazio ${MENS_ERRO_SENHA_OBRIGATORIO}" owner="resources_autenticar_E2R" source_name="Aparece o erro vazio ${COMPONENTE}">
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-02-22T18:41:52.274692" level="INFO">Element '//android.view.View[@content-desc="Required field."]' attribute 'content-desc' is 'Required field.' </msg>
+<msg time="2024-02-22T18:41:52.274692" level="INFO">xpath criteria: //android.view.View[@content-desc="Required field."]</msg>
+<arg>${COMPONENTE}</arg>
+<arg>content-desc</arg>
+<arg>Required field.</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-02-22T18:41:51.524610" elapsed="0.750082"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:51.524610" elapsed="0.750082"/>
+</kw>
+<kw name="Close app" owner="resources_comum" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-02-22T18:41:52.276700" elapsed="0.495793"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:52.275692" elapsed="0.496801"/>
+</kw>
+<tag>Teste valor vazio</tag>
+<status status="PASS" start="2024-02-22T18:41:23.440184" elapsed="29.333648"/>
+</test>
+<test id="s1-t4" name="CT_004 - Teste o campo E-mail e Senha vazio" line="36">
+<kw name="Open app android" owner="resources_comum" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>platformName=Android</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=true</arg>
+<arg>fullReset=false</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-02-22T18:41:52.777822" elapsed="11.453001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T18:42:06.231277" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T18:42:04.230823" elapsed="2.000454"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:41:52.776819" elapsed="13.454458"/>
+</kw>
+<kw name="Given Que estou na tela de autenticação" owner="resources_autenticar_E2R">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:07.228327" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<arg>${BT_LOGIN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:42:06.232341" elapsed="0.995986"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:07.376614" level="INFO">xpath criteria: //android.widget.ImageView</msg>
+<arg>${LOGO_ELETRA}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-02-22T18:42:07.229326" elapsed="0.147288"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:07.512295" level="INFO">xpath criteria: //android.view.View[@content-desc="Login"]</msg>
+<arg>${TITULO_TELA_LOGIN}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-02-22T18:42:07.376614" elapsed="0.135681"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:06.232341" elapsed="1.279954"/>
+</kw>
+<kw name="And Preencho os campos com valores validos" owner="resources_autenticar_E2R">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:07.678646" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:42:07.514906" elapsed="0.163740"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:07.682084" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'.</msg>
+<msg time="2024-02-22T18:42:07.901568" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:07.678646" elapsed="0.222922"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:07.903768" level="INFO">Typing text 'isaac.bez.oliveira@gmail.com' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'</msg>
+<msg time="2024-02-22T18:42:08.905621" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>isaac.bez.oliveira@gmail.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:07.901568" elapsed="1.004053"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:09.804677" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-22T18:42:08.905621" elapsed="0.899056"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:09.806639" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
+<msg time="2024-02-22T18:42:10.013622" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:09.804677" elapsed="0.209979"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:10.016644" level="INFO">Typing text '61qLKgnS' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-02-22T18:42:11.021639" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>61qLKgnS</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:10.014656" elapsed="1.006983"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:07.513840" elapsed="3.507799"/>
+</kw>
+<kw name="When Defino ${CAMPO_USUARIO} vazio" owner="resources_autenticar_E2R" source_name="Defino ${COMPONENTE} vazio">
+<kw name="Clico em ${COMPONENTE}" owner="resources_autenticar_E2R" source_name="Clico em ${COMPONENTE}">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:11.024875" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'.</msg>
+<msg time="2024-02-22T18:42:11.700172" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:11.023880" elapsed="0.677288"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:11.022637" elapsed="0.678531"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:11.703728" level="INFO">Typing text ' ' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'</msg>
+<msg time="2024-02-22T18:42:12.797240" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${COMPONENTE}</arg>
+<arg>${SPACE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:11.701168" elapsed="1.096072"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:12.800415" level="INFO">Clear text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'</msg>
+<msg time="2024-02-22T18:42:14.007566" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:12.798404" elapsed="1.209162"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:11.022637" elapsed="2.984929"/>
+</kw>
+<kw name="And Defino ${CAMPO_SENHA} vazio" owner="resources_autenticar_E2R" source_name="Defino ${COMPONENTE} vazio">
+<kw name="Clico em ${COMPONENTE}" owner="resources_autenticar_E2R" source_name="Clico em ${COMPONENTE}">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:14.013078" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
+<msg time="2024-02-22T18:42:15.036909" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:14.010569" elapsed="1.026340"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:14.009565" elapsed="1.027344"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:15.040912" level="INFO">Typing text ' ' into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-02-22T18:42:15.977490" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${COMPONENTE}</arg>
+<arg>${SPACE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:15.036909" elapsed="0.941582"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:15.981032" level="INFO">Clear text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-02-22T18:42:16.657458" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:15.978491" elapsed="0.678967"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:14.009565" elapsed="2.647893"/>
+</kw>
+<kw name="And Clico em ${BT_LOGIN}" owner="resources_autenticar_E2R" source_name="Clico em ${COMPONENTE}">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:16.661459" level="INFO">Clicking element '//android.widget.Button[@content-desc="Login"]'.</msg>
+<msg time="2024-02-22T18:42:17.814327" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<arg>${COMPONENTE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-22T18:42:16.658460" elapsed="1.155867"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:16.658460" elapsed="1.155867"/>
+</kw>
+<kw name="Then Aparece o erro vazio ${MENS_ERRO_EMAIL_OBRIGATORIO}" owner="resources_autenticar_E2R" source_name="Aparece o erro vazio ${COMPONENTE}">
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:17.954467" level="INFO">CAUTION: '//android.view.View[@content-desc="Required field."][1]' matched 2 elements - using the first element only</msg>
+<msg time="2024-02-22T18:42:17.987881" level="INFO">Element '//android.view.View[@content-desc="Required field."][1]' attribute 'content-desc' is 'Required field.' </msg>
+<msg time="2024-02-22T18:42:17.987881" level="INFO">xpath criteria: //android.view.View[@content-desc="Required field."][1]</msg>
+<arg>${COMPONENTE}</arg>
+<arg>content-desc</arg>
+<arg>Required field.</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-02-22T18:42:17.816327" elapsed="0.171554"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:17.815329" elapsed="0.173513"/>
+</kw>
+<kw name="And Aparece o erro vazio ${MENS_ERRO_SENHA_OBRIGATORIO2}" owner="resources_autenticar_E2R" source_name="Aparece o erro vazio ${COMPONENTE}">
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-02-22T18:42:18.125849" level="INFO">Element 'xpath=(//android.view.View[@content-desc="Required field."])[2]' attribute 'content-desc' is 'Required field.' </msg>
+<msg time="2024-02-22T18:42:18.125849" level="INFO">xpath criteria: (//android.view.View[@content-desc="Required field."])[2]</msg>
+<arg>${COMPONENTE}</arg>
+<arg>content-desc</arg>
+<arg>Required field.</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-02-22T18:42:17.989843" elapsed="0.136006"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:17.988842" elapsed="0.137007"/>
+</kw>
+<kw name="Close app" owner="resources_comum" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-02-22T18:42:18.127844" elapsed="0.303284"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:42:18.126852" elapsed="0.304276"/>
+</kw>
+<tag>Teste valor vazio</tag>
+<status status="PASS" start="2024-02-22T18:41:52.775824" elapsed="25.655304"/>
+</test>
+<status status="PASS" start="2024-02-22T18:40:17.442815" elapsed="120.990853"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">Teste valor vazio</stat>
+<stat pass="1" fail="0" skip="0">Visibilidade</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="tests autenticar E2R">tests autenticar E2R</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

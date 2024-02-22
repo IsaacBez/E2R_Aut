@@ -7,14 +7,14 @@ Resource     ../resources_comum.robot
 
 ${LOGO_ELETRA}                         //android.widget.ImageView
 ${TITULO_TELA_LOGIN}                   //android.view.View[@content-desc="Login"]
-${CAMPO_USUARIO}                       xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]
-${CAMPO_SENHA}                         xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]
-${BT_LOGIN}                            xpath=//android.widget.Button[@content-desc="Login"]
-${BT_VISUALIZAR_SENHA}                 xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]/android.widget.Button
-${LINK_RECUPERAR_SENHA}                xpath=//android.view.View[@content-desc="Forgot password?"]
-${LINK_CRIAR_CONTA}                    xpath=//android.widget.Button[@content-desc="Create account"]
-${MENS_ERRO_EMAIL_OBRIGATORIO}         xpath=//android.view.View[@content-desc="Required field."][1]
-${MENS_ERRO_SENHA_OBRIGATORIO}         xpath=//android.view.View[@content-desc="Required field."]
+${CAMPO_USUARIO}                       //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]                       
+${CAMPO_SENHA}                         //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]
+${BT_LOGIN}                            //android.widget.Button[@content-desc="Login"]
+${BT_VISUALIZAR_SENHA}                 //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]/android.widget.Button
+${LINK_RECUPERAR_SENHA}                //android.view.View[@content-desc="Forgot password?"]
+${LINK_CRIAR_CONTA}                    //android.widget.Button[@content-desc="Create account"]
+${MENS_ERRO_EMAIL_OBRIGATORIO}         //android.view.View[@content-desc="Required field."][1]
+${MENS_ERRO_SENHA_OBRIGATORIO}         //android.view.View[@content-desc="Required field."]
 ${MENS_ERRO_SENHA_OBRIGATORIO2}        xpath=(//android.view.View[@content-desc="Required field."])[2]
 ${LINGUAGEM}                           {//android.widget....}
 ${BT_PERMISSAO_USO_APP}                {//android.widget....}
